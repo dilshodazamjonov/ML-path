@@ -26,7 +26,7 @@ def predict():
     try:
         prob = model.predict_proba(tokenized_email)[0][1]
         spam_prob = round(prob * 100, 2)
-    except:
+    except Exception:
         spam_prob = None
 
     predictions = 1 if prediction == 1 else -1
