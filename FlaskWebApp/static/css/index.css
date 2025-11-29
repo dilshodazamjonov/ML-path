@@ -1,0 +1,139 @@
+/* General page styling */
+body {
+    background: linear-gradient(135deg, #d0e8ff, #eef5ff);
+    font-family: "Poppins", Arial, sans-serif;
+    padding: 40px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Card-style center container */
+.container {
+    background: #ffffffc5;
+    backdrop-filter: blur(10px);
+    padding: 40px 50px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    max-width: 650px;
+    width: 100%;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Page title */
+h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #133b5c;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #555;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+/* Form container */
+form {
+    display: block;
+    margin-bottom: 25px;
+}
+
+/* Textarea */
+textarea {
+    width: 100%;
+    height: 220px;
+    border-radius: 14px;
+    border: 2px solid #cbd8e1;
+    padding: 15px;
+    font-size: 15px;
+    resize: none;
+    outline: none;
+    transition: 0.25s ease;
+    background: #f7fbff;
+}
+
+textarea:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 10px rgba(74, 144, 226, 0.3);
+}
+
+/* Buttons */
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    background: linear-gradient(135deg, #4a90e2, #357abd);
+    color: white;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.2s ease;
+    margin-right: 10px;
+    box-shadow: 0 5px 12px rgba(74, 144, 226, 0.3);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #5aa2f3, #3f84c2);
+}
+
+button:active {
+    transform: scale(0.96);
+}
+
+a {
+    font-size: 16px;
+    color: #357abd;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Result Output Box */
+.result-box {
+    margin-top: 35px;
+    padding: 25px 30px;
+    border-radius: 15px;
+    animation: slideUp 0.4s ease-in-out;
+}
+
+.result-box.spam {
+    background-color: #ffe2e7;
+    border-left: 6px solid #c1121f;
+}
+
+.result-box.ham {
+    background-color: #d8f5d0;
+    border-left: 6px solid #2d6a4f;
+}
+
+.result-box h2 {
+    margin: 0;
+    font-size: 26px;
+}
+
+.prob {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}

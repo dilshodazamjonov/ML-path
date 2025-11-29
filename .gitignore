@@ -24,7 +24,6 @@ build/
 dist/
 *.log
 *.sqlite3
-*.pkl
 
 # Git LFS tracked files (you already use this)
 *.h5

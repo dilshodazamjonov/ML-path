@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Email Text Classifier</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Email Spam Detector</h1>
+        <p class="subtitle">Paste any email text below and instantly detect if it's spam or not.</p>
+
+        <form action="{{ url_for('predict') }}" method="post">
+            <textarea name="email_content" placeholder="Type or paste email content here..."></textarea>
+
+            <div class="buttons">
+                <button type="submit">Analyze</button>
+                <a href="/">Reset</a>
+            </div>
+        </form>
+
+        {% if spam_prob is not none %}
+        <div class="result-box {% if is_spam %}spam{% else %}ham{% endif %}">
+            <h2>
+                {% if is_spam %}
+                    SPAM Detected!
+                {% else %}
+                    Not Spam
+                {% endif %}
+            </h2>
+
+            <p class="prob">
+                Spam Probability: <strong>{{ spam_prob }}%</strong>
+            </p>
+        </div>
+        {% endif %}
+    </div>
+
+</body>
+</html>
